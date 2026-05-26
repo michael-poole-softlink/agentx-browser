@@ -18,7 +18,7 @@ winget install Gyan.FFmpeg
 2. Install package in Pi:
 
 ```bash
-pi install C:\Users\michael.poole\Documents\Dev\AI\agentx-browser
+pi install git:github.com/michael-poole-softlink/agentx-browser
 ```
 
 3. Reload Pi:
@@ -77,16 +77,22 @@ No `browser` tool registered. Avoids conflict with old `pi-agent-browser` packag
 
 ## Install in Pi
 
-From this directory:
+Install from GitHub:
 
 ```bash
-pi install C:\Users\michael.poole\Documents\Dev\AI\agentx-browser
+pi install git:github.com/michael-poole-softlink/agentx-browser
 ```
 
-Or test one run only:
+Or try one run only without installing permanently:
 
 ```bash
-pi -e C:\Users\michael.poole\Documents\Dev\AI\agentx-browser
+pi -e git:github.com/michael-poole-softlink/agentx-browser
+```
+
+Local path install still works for development:
+
+```bash
+pi install /absolute/path/to/agentx-browser
 ```
 
 Force-load skills manually if wanted:
