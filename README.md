@@ -4,6 +4,32 @@ Robust Pi package for [`agent-browser`](https://github.com/vercel-labs/agent-bro
 
 Purpose: replace fragile one-string wrapper with structured Pi tools that use exact argv arrays, batch mode, screenshot handling, truncation, and upstream agent-browser skills.
 
+## Requirements
+
+Install these first:
+
+1. `agent-browser`
+   - required for all browser automation tools in this package
+2. `ffmpeg`
+   - required only if you want QA video transcoding to MP4 or GIF
+   - raw WebM recording still works without ffmpeg
+
+Example install:
+
+```bash
+npm install -g agent-browser
+agent-browser install
+agent-browser doctor
+```
+
+Windows ffmpeg example:
+
+```bash
+winget install Gyan.FFmpeg
+```
+
+Make sure both `agent-browser` and `ffmpeg` are available on `PATH` before using this package.
+
 ## What package adds
 
 - `browser_run` — run any `agent-browser` command via exact argv array.
@@ -49,17 +75,9 @@ Quick QA kickoff:
 
 Can run alongside old `pi-agent-browser` because this package uses unique tool names (`browser_run`, `browser_snapshot`, etc.).
 
-## agent-browser dependency
+## Runtime note
 
-Requires global `agent-browser` binary:
-
-```bash
-npm install -g agent-browser
-agent-browser install
-agent-browser doctor
-```
-
-Current wrapper intentionally does not auto-install or auto-close browsers. To close all browser sessions on Pi shutdown:
+Current wrapper intentionally does not auto-install browser dependencies or auto-close browsers. To close all browser sessions on Pi shutdown:
 
 ```bash
 set AGENTX_BROWSER_CLOSE_ON_SHUTDOWN=1
