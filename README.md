@@ -4,6 +4,36 @@ Robust Pi package for [`agent-browser`](https://github.com/vercel-labs/agent-bro
 
 Purpose: replace fragile one-string wrapper with structured Pi tools that use exact argv arrays, batch mode, screenshot handling, truncation, and upstream agent-browser skills.
 
+## Quick Start
+
+1. Install dependencies:
+
+```bash
+npm install -g agent-browser
+agent-browser install
+agent-browser doctor
+winget install Gyan.FFmpeg
+```
+
+2. Install package in Pi:
+
+```bash
+pi install C:\Users\michael.poole\Documents\Dev\AI\agentx-browser
+```
+
+3. Reload Pi:
+
+```bash
+/reload
+```
+
+4. Use it:
+
+```bash
+/qa-browser https://example.com
+/skill:agentx-browser-qa
+```
+
 ## Requirements
 
 Install these first:
