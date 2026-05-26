@@ -1,0 +1,34 @@
+{
+  "name": "agentx-browser",
+  "version": "0.1.0",
+  "description": "Robust Pi package for agent-browser CLI: structured browser tools, batch execution, screenshots, and bundled usage skill.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "browser",
+    "agent-browser",
+    "automation"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ],
+    "skills": [
+      "./skills"
+    ],
+    "prompts": [
+      "./prompts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  }
+}
