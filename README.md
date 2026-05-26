@@ -11,7 +11,6 @@ Purpose: replace fragile one-string wrapper with structured Pi tools that use ex
 ```bash
 npm install -g agent-browser
 agent-browser install
-agent-browser doctor
 winget install Gyan.FFmpeg
 ```
 
@@ -49,7 +48,6 @@ Example install:
 ```bash
 npm install -g agent-browser
 agent-browser install
-agent-browser doctor
 ```
 
 Windows ffmpeg example:
@@ -59,6 +57,14 @@ winget install Gyan.FFmpeg
 ```
 
 Make sure both `agent-browser` and `ffmpeg` are available on `PATH` before using this package.
+
+Optional:
+
+```bash
+agent-browser doctor
+```
+
+Use `agent-browser doctor` only if install seems broken or you want to verify the local `agent-browser` setup.
 
 ## What package adds
 
